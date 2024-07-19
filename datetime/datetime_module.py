@@ -56,3 +56,43 @@ td = timedelta(days=2, hours=3)
 total_seconds = td.total_seconds()
 print(total_seconds)  # Output: 183600.0
 
+def string_to_datetime():
+    print(string_to_datetime.__name__)
+    dt = datetime.strptime("2024-04-23 12:30:45", "%Y-%m-%d %H:%M:%S")
+    print(dt)
+
+def string_to_timedelta():
+    print(string_to_timedelta.__name__)
+    td = timedelta(days=2, hours=3)
+    print(td)
+
+def string_to_datetime_date():
+    """convert string to datetime object and return the date in datetime.date"""
+    print(string_to_datetime_date.__name__)
+    dt = datetime.strptime("2024-04-23", "%Y-%m-%d")
+    datetime_dt = dt.date(dt)
+    print(dt)
+def datetime_datetime_to_datetime_date():
+    """convert datetime object to datetime.date"""
+    print(datetime_datetime_to_datetime_date.__name__)
+    dt = datetime(2024, 4, 23, 12, 30, 45)
+    datetime_dt = datetime.date(dt)
+    print(datetime_dt)
+
+def datetime_datetime_to_string():
+    print(datetime_datetime_to_string.__name__)
+    dt = datetime(2024, 4, 23, 12, 30, 45)
+    dt_str = dt.strftime("%Y-%m-%d %H:%M:%S")
+    print(dt_str)
+
+def datetime_date_to_string():
+    print(datetime_date_to_string.__name__)
+    dt = datetime(2024, 4, 23, 12, 30, 45)
+    dt_str = dt.strftime("%Y-%m-%d")
+    # how to skip suggestions in codeium?
+    print("type is ", type(dt_str))
+    print(dt_str)
+
+string_to_timedelta()
+datetime_datetime_to_string()
+datetime_date_to_string()
